@@ -1,0 +1,201 @@
+## Next
+
+## 1.6.0
+
+### Minor Changes
+
+- b2bd035: Add an opt-in Swift Package Manager resolution path for `posthog-ios`. Set `"posthog.useSpm": "true"` in your app's `ios/Podfile.properties.json` and (on RN >= 0.75) `pod install` will resolve `posthog-ios` from `https://github.com/PostHog/posthog-ios.git` via the RN `spm_dependency` helper instead of CocoaPods trunk.
+
+  Default behavior is unchanged: without the property, `posthog-ios` resolves through CocoaPods. This makes the SPM path available ahead of [PostHog/posthog-ios#472](https://github.com/PostHog/posthog-ios/issues/472) and the CocoaPods trunk read-only date (2026-12-02) without forcing consumers to migrate yet.
+
+  The SPM path uses `upToNextMinorVersion: 3.58.1` to match the existing CocoaPods `~> 3.58.1` constraint and requires `use_frameworks! :linkage => :dynamic` in the consumer's `Podfile` ([known RN limitation](https://github.com/facebook/react-native/pull/44627#issuecomment-2123119711)).
+
+## 1.5.8
+
+### Patch Changes
+
+- 2b1b341: chore: bridge the experimental iOS background screenshot capture option and bump posthog-ios dependency to 3.58.1
+
+## 1.5.7
+
+### Patch Changes
+
+- 38be494: chore: bump posthog-ios dependency to 3.57.6
+
+## 1.5.6
+
+### Patch Changes
+
+- 0af89ff: chore: bump posthog-ios dependency to 3.57.1
+
+## 1.5.5
+
+### Patch Changes
+
+- faac221: Prefer projectToken over apiKey when starting iOS session replay.
+
+## 1.5.4
+
+### Patch Changes
+
+- 0e83371: chore: bump posthog-ios dependency to 3.48.2
+
+## 1.5.3
+
+### Patch Changes
+
+- 0940a87: Update posthog-android to 3.40.2.
+
+## 1.5.2
+
+### Patch Changes
+
+- 82e8d8b: chore: migrate to Kotlin 2.0
+- 13079ae: - chore: update posthog-android dependency to 3.39.1
+
+## 1.5.1
+
+### Patch Changes
+
+- 126ce32: fix: bump Android SDK to prevent SIGSEGV crash
+
+## 1.5.0
+
+### Minor Changes
+
+- 81af58f: chore: add sampleRate support for android and ios
+
+## 1.4.1
+
+### Patch Changes
+
+- d4a5dc9: fix: build error on iOS
+
+## 1.4.0
+
+### Minor Changes
+
+- 8a63db7: feat: enable captureLog for iOS
+
+## 1.3.0
+
+### Minor Changes
+
+- 56343f7: - feat: add startRecording and stopRecording bridge methods for manual session replay control
+
+## 1.2.4
+
+### Patch Changes
+
+- 42f77c5: test: release posthog-react-native-session-replay with approval workflow
+
+## 1.2.3 - 2025-11-24
+
+- fix: cut a new version for fixing compromised packages
+
+## 1.2.2 - 2025-11-24
+
+- this version is compromised
+
+## 1.2.1 - 2025-10-15
+
+- fix: Prevent exceptions on missing config keys
+- fix: Prevent native iOS surveys from showing
+
+## 1.2.0 - 2025-09-17
+
+- chore: add support for throttleDelayMs
+
+## 1.1.5 - 2025-09-16
+
+- chore: update posthog-android dependency to 3.21.3
+
+## 1.1.4 - 2025-09-11
+
+- chore: update posthog-android dependency to 3.21.2
+
+## 1.1.3 - 2025-08-25
+
+- chore: update posthog-android dependency to 3.20.4
+
+## 1.1.2 - 2025-08-11
+
+- chore: update posthog-android dependency to 3.20.2
+
+## 1.1.1 - 2025-06-24
+
+- fix: check if distinctId and anonId are a string before using it
+- chore: pin the iOS SDK to 3.21.x
+- chore: pin the Android SDK to 3.19.1
+
+## 1.1.0 - 2025-06-06
+
+- chore: remove maskPhotoLibraryImages from the SDK config
+
+## 1.0.6 - 2025-04-22
+
+- fix: add types key to package.json
+
+## 1.0.5 - 2025-03-04
+
+- chore: pin the iOS SDK to 3.20.x
+
+## 1.0.4 - 2025-03-03
+
+- chore: pin the iOS SDK to 3.18.x until we fix [this issue](https://github.com/PostHog/posthog-ios/issues/292)
+
+## 1.0.3 - 2025-02-26
+
+- chore: bump Android SDK to 3.11.3
+
+## 1.0.2 - 2025-02-25
+
+- fix: distinctId and anonymousId should degrade gracefully if they are strings that can't be parsed
+
+## 1.0.1 - 2025-02-21
+
+- chore: pin the iOS SDK to 3.x.x
+
+## 1.0.0 - 2025-02-07
+
+- chore: Session Replay - GA
+
+## 0.1.9 - 2025-01-09
+
+- chore: pin the iOS SDK to 3.18.0
+
+## 0.1.8 - 2024-11-26
+
+- fix: mask sandboxed system views like photo picker and user library photos
+
+## 0.1.7 - 2024-11-19
+
+- fix: respects the flushAt flag
+
+## 0.1.6 - 2024-10-25
+
+- chore: forces the SDK to be initialized on the main thread
+
+## 0.1.5 - 2024-10-18
+
+- chore: target min iOS 13 in podspec
+
+## 0.1.4 - 2024-10-14
+
+- chore: upgrade Android SDK to 3.8.2
+
+## 0.1.3 - 2024-10-11
+
+- chore: upgrade Android SDK to 3.8.1
+
+## 0.1.2 - 2024-09-24
+
+- chore: set the right sdk name and version
+
+## 0.1.1 - 2024-09-24
+
+- fix: session replay plugin isn't properly identifying users already identified
+
+## 0.1.0 - 2024-09-19
+
+- first minor release for React Native Session Replay
