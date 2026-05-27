@@ -137,7 +137,7 @@ jobs:
           slack_bot_token: ${{ secrets.SLACK_CLIENT_LIBRARIES_BOT_TOKEN }}
           slack_channel_id: ${{ vars.SLACK_APPROVALS_CLIENT_LIBRARIES_CHANNEL_ID }}
           thread_ts: ${{ needs.notify-approval-needed.outputs.slack_ts }}
-          message: '❌ Failed to bump version for `posthog-react-native-session-replay@${{ steps.apply-changesets.outputs.new-version }}`! <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|View logs>'
+          message: '❌ Failed to bump version for `posthog-react-native-plugin@${{ steps.apply-changesets.outputs.new-version }}`! <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|View logs>'
           emoji_reaction: 'x'
 
   notify-rejected:
@@ -258,7 +258,7 @@ jobs:
         uses: PostHog/posthog-github-action@58dea254b598fb5d469c0699c98af8288a7f7650 # v1.2.0
         with:
           posthog-token: '${{ secrets.POSTHOG_PROJECT_API_KEY }}'
-          event: 'posthog-react-native-session-replay-release-workflow-failure'
+          event: 'posthog-react-native-plugin-release-workflow-failure'
           properties: >-
             {
               "commitSha": "${{ github.sha }}",
@@ -275,7 +275,7 @@ jobs:
           slack_bot_token: ${{ secrets.SLACK_CLIENT_LIBRARIES_BOT_TOKEN }}
           slack_channel_id: ${{ vars.SLACK_APPROVALS_CLIENT_LIBRARIES_CHANNEL_ID }}
           thread_ts: ${{ needs.notify-approval-needed.outputs.slack_ts }}
-          message: '❌ Failed to release `posthog-react-native-session-replay@${{ steps.check-package-version.outputs.committed-version }}`! <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|View logs>'
+          message: '❌ Failed to release `posthog-react-native-plugin@${{ steps.check-package-version.outputs.committed-version }}`! <https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|View logs>'
           emoji_reaction: 'x'
 
   notify-released:
@@ -291,5 +291,5 @@ jobs:
           slack_bot_token: ${{ secrets.SLACK_CLIENT_LIBRARIES_BOT_TOKEN }}
           slack_channel_id: ${{ vars.SLACK_APPROVALS_CLIENT_LIBRARIES_CHANNEL_ID }}
           thread_ts: ${{ needs.notify-approval-needed.outputs.slack_ts }}
-          message: '🚀 `posthog-react-native-session-replay` released successfully!'
+          message: '🚀 `posthog-react-native-plugin` released successfully!'
           emoji_reaction: 'rocket'

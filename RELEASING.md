@@ -38,7 +38,7 @@ No release label is required. When the PR is merged to `main`, the release workf
 
 ### Manual Trigger
 
-You can also manually trigger the release workflow from the [Actions tab](https://github.com/PostHog/posthog-react-native-session-replay/actions/workflows/release.yml) by clicking "Run workflow".
+You can also manually trigger the release workflow from the [Actions tab](https://github.com/PostHog/posthog-react-native-plugin/actions/workflows/release.yml) by clicking "Run workflow".
 
 ## Version Bumping
 
@@ -65,7 +65,7 @@ pnpm changeset pre exit
 
 ## NPM Package
 
-The package is published as [`posthog-react-native-session-replay`](https://www.npmjs.com/package/posthog-react-native-session-replay) on NPM.
+The package is published as [`posthog-react-native-plugin`](https://www.npmjs.com/package/posthog-react-native-plugin) on NPM.
 
 ## Troubleshooting
 

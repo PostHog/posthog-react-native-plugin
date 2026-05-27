@@ -1,7 +1,7 @@
 {
-  "name": "posthog-react-native-session-replay",
-  "version": "1.6.0",
-  "description": "Session Replay",
+  "name": "posthog-react-native-plugin",
+  "version": "1.0.0",
+  "description": "PostHog React Native plugin for iOS and Android integrations",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/module/index.js",
@@ -37,7 +37,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "pnpm --filter posthog-react-native-session-replay-example",
+    "example": "pnpm --filter posthog-react-native-plugin-example",
     "test": "jest",
     "typecheck": "tsc",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -52,14 +52,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PostHog/posthog-react-native-session-replay.git"
+    "url": "git+https://github.com/PostHog/posthog-react-native-plugin.git"
   },
   "author": "PostHog <engineering@posthog.com> (https://github.com/PostHog)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/PostHog/posthog-react-native-session-replay/issues"
+    "url": "https://github.com/PostHog/posthog-react-native-plugin/issues"
   },
-  "homepage": "https://github.com/PostHog/posthog-react-native-session-replay#readme",
+  "homepage": "https://github.com/PostHog/posthog-react-native-plugin#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

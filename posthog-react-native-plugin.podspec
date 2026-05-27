@@ -9,7 +9,7 @@ folly_compiler_flags = '-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1 
 posthog_ios_version = '3.58.1'
 
 Pod::Spec.new do |s|
-  s.name         = "posthog-react-native-session-replay"
+  s.name         = "posthog-react-native-plugin"
   s.version      = package["version"]
   s.summary      = package["description"]
   s.homepage     = package["homepage"]
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => min_ios_version_supported }
-  s.source       = { :git => "https://github.com/PostHog/posthog-react-native-session-replay.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/PostHog/posthog-react-native-plugin.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{swift,h,hpp,m,mm,c,cpp}"
 

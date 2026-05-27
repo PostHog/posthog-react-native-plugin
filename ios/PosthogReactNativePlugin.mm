@@ -1,6 +1,12 @@
 #import <React/RCTBridgeModule.h>
 
-@interface RCT_EXTERN_MODULE(PosthogReactNativeSessionReplay, NSObject)
+@interface RCT_EXTERN_MODULE(PosthogReactNativePlugin, NSObject)
+
+RCT_EXTERN_METHOD(setup:(NSString)sessionId
+                 withSdkOptions:(NSDictionary)sdkOptions
+                 withPluginConfig:(NSDictionary)pluginConfig
+                 withResolver:(RCTPromiseResolveBlock)resolve
+                 withRejecter:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(start:(NSString)sessionId
                  withSdkOptions:(NSDictionary)sdkOptions

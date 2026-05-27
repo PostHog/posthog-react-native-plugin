@@ -148,7 +148,7 @@ jobs:
       - name: Build example for iOS
         run: |
           cd example/ios
-          set -o pipefail && xcrun xcodebuild -workspace PosthogReactNativeSessionReplayExample.xcworkspace -configuration Debug -scheme posthog-react-native-session-replay -destination generic/platform=ios | xcpretty
+          set -o pipefail && xcrun xcodebuild -workspace PosthogReactNativePluginExample.xcworkspace -configuration Debug -scheme posthog-react-native-plugin -destination generic/platform=ios | xcpretty
 
   build-ios-spm:
     # Exercises the opt-in path: `posthog.useSpm` in Podfile.properties.json
@@ -185,4 +185,4 @@ jobs:
       - name: Build example for iOS Simulator
         run: |
           cd example/ios
-          xcodebuild -workspace PosthogReactNativeSessionReplayExample.xcworkspace -configuration Debug -scheme posthog-react-native-session-replay -sdk iphonesimulator -destination 'generic/platform=iOS Simulator'
+          xcodebuild -workspace PosthogReactNativePluginExample.xcworkspace -configuration Debug -scheme posthog-react-native-plugin -sdk iphonesimulator -destination 'generic/platform=iOS Simulator'

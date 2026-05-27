@@ -7,5 +7,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["posthog-react-native-session-replay-example"]
+  "ignore": ["posthog-react-native-plugin-example"]
 }
