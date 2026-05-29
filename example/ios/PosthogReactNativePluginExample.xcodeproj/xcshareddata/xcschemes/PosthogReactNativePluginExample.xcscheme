@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "PosthogReactNativeSessionReplayExample.app"
-               BlueprintName = "PosthogReactNativeSessionReplayExample"
-               ReferencedContainer = "container:PosthogReactNativeSessionReplayExample.xcodeproj">
+               BuildableName = "PosthogReactNativePluginExample.app"
+               BlueprintName = "PosthogReactNativePluginExample"
+               ReferencedContainer = "container:PosthogReactNativePluginExample.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "PosthogReactNativeSessionReplayExampleTests.xctest"
-               BlueprintName = "PosthogReactNativeSessionReplayExampleTests"
-               ReferencedContainer = "container:PosthogReactNativeSessionReplayExample.xcodeproj">
+               BuildableName = "PosthogReactNativePluginExampleTests.xctest"
+               BlueprintName = "PosthogReactNativePluginExampleTests"
+               ReferencedContainer = "container:PosthogReactNativePluginExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "PosthogReactNativeSessionReplayExample.app"
-            BlueprintName = "PosthogReactNativeSessionReplayExample"
-            ReferencedContainer = "container:PosthogReactNativeSessionReplayExample.xcodeproj">
+            BuildableName = "PosthogReactNativePluginExample.app"
+            BlueprintName = "PosthogReactNativePluginExample"
+            ReferencedContainer = "container:PosthogReactNativePluginExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "PosthogReactNativeSessionReplayExample.app"
-            BlueprintName = "PosthogReactNativeSessionReplayExample"
-            ReferencedContainer = "container:PosthogReactNativeSessionReplayExample.xcodeproj">
+            BuildableName = "PosthogReactNativePluginExample.app"
+            BlueprintName = "PosthogReactNativePluginExample"
+            ReferencedContainer = "container:PosthogReactNativePluginExample.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

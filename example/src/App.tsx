@@ -1,22 +1,22 @@
 import { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, Platform } from 'react-native';
-import type PostHogReactNativeSessionReplay from 'posthog-react-native-session-replay';
+import type PostHogReactNativePlugin from 'posthog-react-native-plugin';
 
-export let OptionalReactNativeSessionReplay:
-  | typeof PostHogReactNativeSessionReplay
+export let OptionalReactNativePlugin:
+  | typeof PostHogReactNativePlugin
   | undefined;
 
 try {
-  OptionalReactNativeSessionReplay = Platform.select({
+  OptionalReactNativePlugin = Platform.select({
     macos: undefined,
     web: undefined,
-    default: require('posthog-react-native-session-replay'), // Only Android and iOS
+    default: require('posthog-react-native-plugin'), // Only Android and iOS
   });
 } catch (e) {
   // do nothing
   console.warn(
     'PostHog Debug',
-    `Error loading posthog-react-native-session-replay: ${e}`
+    `Error loading posthog-react-native-plugin: ${e}`
   );
 }
 
@@ -24,13 +24,13 @@ export default function App() {
   const [result, setResult] = useState<string | undefined>();
 
   useEffect(() => {
-    if (OptionalReactNativeSessionReplay) {
+    if (OptionalReactNativePlugin) {
       setResult('ok');
-      // OptionalReactNativeSessionReplay.isEnabled().then((isEnabled) => {
+      // OptionalReactNativePlugin.isEnabled().then((isEnabled) => {
       //   console.warn('PostHog Debug', `isEnabled: ${isEnabled}`);
       //   setResult(isEnabled.valueOf().toString());
       // });
-      // OptionalReactNativeSessionReplay.startSession(
+      // OptionalReactNativePlugin.startSession(
       //   'e58ed763-928c-4155-bee9-fdbaaadc15f3'
       // )
       //   .then(() => {
@@ -39,17 +39,19 @@ export default function App() {
       //   .catch(() => {
       //     setResult('failed');
       //   });
-      // OptionalReactNativeSessionReplay.start(
+      // OptionalReactNativePlugin.setup(
       //   'e58ed763-928c-4155-bee9-fdbaaadc15f3',
       //   {
       //     apiKey: 'phc_QFbR1y41s5sxnNTZoyKG2NJo2RlsCIWkUfdpawgb40D',
       //     host: 'https://us.i.posthog.com',
       //   },
-      //   {},
-      //   {}
+      //   {
+      //     sessionReplay: { enabled: true, sdkReplayConfig: {}, decideReplayConfig: {} },
+      //     errorTracking: { nativeAutocapture: true },
+      //   }
       // )
       //   .then(() => {
-      //     OptionalReactNativeSessionReplay?.isEnabled().then((isEnabled) => {
+      //     OptionalReactNativePlugin?.isEnabled().then((isEnabled) => {
       //       console.warn('PostHog Debug', `isEnabled: ${isEnabled}`);
       //       setResult(`isEnabled: ${isEnabled}`);
       //     });

@@ -83,7 +83,7 @@ jobs:
         if: ${{ matrix.language == 'swift' }}
         run: |
           cd example/ios
-          xcrun xcodebuild -workspace PosthogReactNativeSessionReplayExample.xcworkspace -configuration Debug -scheme posthog-react-native-session-replay -destination generic/platform=ios | xcpretty
+          xcrun xcodebuild -workspace PosthogReactNativePluginExample.xcworkspace -configuration Debug -scheme posthog-react-native-plugin -destination generic/platform=ios | xcpretty
 
       - name: Build Android
         if: ${{ matrix.language == 'java-kotlin' }}

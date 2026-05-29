@@ -58,9 +58,9 @@ pnpm example ios
 
 The example app is configured to use the local version of the library, so JavaScript changes are reflected without a rebuild, while native code changes require rebuilding the example app.
 
-If you want to use Android Studio or Xcode to edit the native code, you can open `example/android` or `example/ios` respectively. To edit the Objective-C or Swift files, open `example/ios/PosthogReactNativeSessionReplayExample.xcworkspace` in Xcode and find the source files at `Pods > Development Pods > posthog-react-native-session-replay`.
+If you want to use Android Studio or Xcode to edit the native code, you can open `example/android` or `example/ios` respectively. To edit the Objective-C or Swift files, open `example/ios/PosthogReactNativePluginExample.xcworkspace` in Xcode and find the source files at `Pods > Development Pods > posthog-react-native-plugin`.
 
-To edit the Java or Kotlin files, open `example/android` in Android Studio and find the source files at `posthog-react-native-session-replay` under `Android`.
+To edit the Java or Kotlin files, open `example/android` in Android Studio and find the source files at `posthog-react-native-plugin` under `Android`.
 
 ### Commit message convention
 

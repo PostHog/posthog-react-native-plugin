@@ -67,7 +67,7 @@ importers:
 
   example:
     dependencies:
-      posthog-react-native-session-replay:
+      posthog-react-native-plugin:
         specifier: workspace:*
         version: link:..
       react:
